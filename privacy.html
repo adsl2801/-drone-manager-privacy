@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drone Manager — 개인정보 처리방침</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+    background: #0f0f23;
+    color: #e2e8f0;
+    line-height: 1.8;
+  }
+  header {
+    background: #1a1a35;
+    border-bottom: 1px solid rgba(99,102,241,0.3);
+    padding: 24px 0;
+    text-align: center;
+  }
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+  .logo-icon {
+    width: 48px; height: 48px;
+    background: #6366f1;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: 700; color: white;
+  }
+  .logo-text {
+    font-size: 20px; font-weight: 700; color: white;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 24px;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+  .updated {
+    font-size: 14px;
+    color: #a5b4fc;
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(99,102,241,0.2);
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #a5b4fc;
+    margin: 36px 0 12px;
+    padding-left: 12px;
+    border-left: 3px solid #6366f1;
+  }
+  p {
+    font-size: 15px;
+    color: #cbd5e1;
+    margin-bottom: 12px;
+  }
+  ul {
+    padding-left: 20px;
+    margin-bottom: 12px;
+  }
+  li {
+    font-size: 15px;
+    color: #cbd5e1;
+    margin-bottom: 6px;
+  }
+  .card {
+    background: #1a1a35;
+    border: 1px solid rgba(99,102,241,0.2);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+  .card-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #a5b4fc;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .contact-box {
+    background: rgba(99,102,241,0.1);
+    border: 1px solid rgba(99,102,241,0.3);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .contact-box p { color: #a5b4fc; }
+  .lang-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .lang-btn {
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(99,102,241,0.4);
+    background: transparent;
+    color: #a5b4fc;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s;
+  }
+  .lang-btn.active, .lang-btn:hover {
+    background: #6366f1;
+    color: white;
+    border-color: #6366f1;
+  }
+  footer {
+    text-align: center;
+    padding: 32px;
+    color: #64748b;
+    font-size: 13px;
+    border-top: 1px solid rgba(99,102,241,0.1);
+    margin-top: 48px;
+  }
+  .section { display: none; }
+  .section.active { display: block; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">DM</div>
+    <span class="logo-text">Drone Manager</span>
+  </div>
+  <div class="lang-switcher">
+    <button class="lang-btn active" onclick="switchLang('ko')">한국어</button>
+    <button class="lang-btn" onclick="switchLang('en')">English</button>
+    <button class="lang-btn" onclick="switchLang('ja')">日本語</button>
+    <button class="lang-btn" onclick="switchLang('zh')">中文</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- 한국어 -->
+  <div class="section active" id="ko">
+    <h1>개인정보 처리방침</h1>
+    <p class="updated">최종 업데이트: 2026년 4월 25일</p>
+
+    <p>Drone Manager(이하 "앱")는 이용자의 개인정보를 중요시하며, 관련 법률을 준수합니다. 본 방침은 앱이 수집하는 정보와 그 사용 방법을 설명합니다.</p>
+
+    <h2>1. 수집하는 정보</h2>
+    <div class="card">
+      <div class="card-title">자동 수집 정보</div>
+      <ul>
+        <li><strong>위치 정보</strong>: 현재 위치 기반 공역 확인 및 날씨 분석에 사용 (앱 사용 중에만 수집)</li>
+        <li><strong>기기 정보</strong>: 앱 오류 분석을 위한 기기 모델, OS 버전</li>
+        <li><strong>앱 사용 데이터</strong>: 기능 개선을 위한 익명화된 사용 통계</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">사용자 입력 정보</div>
+      <ul>
+        <li><strong>계정 정보</strong>: Google 로그인 시 이메일 주소, 프로필 이름 (Firebase Authentication)</li>
+        <li><strong>드론 기체 정보</strong>: 사용자가 직접 입력한 드론 모델명</li>
+        <li><strong>비행 기록</strong>: 날짜, 장소, 비행 시간, 날씨, 메모 (사용자 입력)</li>
+      </ul>
+    </div>
+
+    <h2>2. 정보 사용 목적</h2>
+    <ul>
+      <li>AI 비행 안전 분석 서비스 제공</li>
+      <li>실시간 공역 및 날씨 정보 조회</li>
+      <li>비행 로그북 저장 및 관리</li>
+      <li>앱 기능 개선 및 오류 수정</li>
+      <li>광고 서비스 제공 (Google AdMob)</li>
+    </ul>
+
+    <h2>3. 제3자 서비스</h2>
+    <p>앱은 다음 제3자 서비스를 사용합니다:</p>
+    <div class="card">
+      <ul>
+        <li><strong>Google Firebase</strong>: 인증, 데이터 저장 — <a href="https://firebase.google.com/support/privacy" style="color:#a5b4fc;">개인정보처리방침</a></li>
+        <li><strong>Google Gemini AI</strong>: AI 분석 서비스 — <a href="https://policies.google.com/privacy" style="color:#a5b4fc;">개인정보처리방침</a></li>
+        <li><strong>Google AdMob</strong>: 광고 서비스 — <a href="https://policies.google.com/privacy" style="color:#a5b4fc;">개인정보처리방침</a></li>
+        <li><strong>V-World API</strong>: 한국 공역 정보 (국토지리정보원)</li>
+        <li><strong>OpenAIP</strong>: 국제 공역 정보</li>
+      </ul>
+    </div>
+
+    <h2>4. 데이터 보관 및 삭제</h2>
+    <p>비행 기록 등 사용자 데이터는 계정 삭제 시 함께 삭제됩니다. 앱 내 로그아웃 후 계정 삭제를 요청하시려면 아래 이메일로 문의해 주세요.</p>
+
+    <h2>5. 아동 개인정보</h2>
+    <p>본 앱은 만 14세 미만 아동을 대상으로 하지 않으며, 해당 연령의 개인정보를 의도적으로 수집하지 않습니다.</p>
+
+    <h2>6. 개인정보 처리방침 변경</h2>
+    <p>본 방침은 변경될 수 있으며, 중요한 변경 사항은 앱 내 공지를 통해 안내드립니다.</p>
+
+    <div class="contact-box">
+      <p style="font-size:16px; font-weight:600; color:white; margin-bottom:8px;">문의하기</p>
+      <p>개인정보 관련 문의사항이 있으시면 아래 이메일로 연락해 주세요.</p>
+      <p style="margin-top:12px; color:white; font-weight:600;">dronemanager.help@gmail.com</p>
+    </div>
+  </div>
+
+  <!-- 영어 -->
+  <div class="section" id="en">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: April 25, 2026</p>
+
+    <p>Drone Manager ("the App") values your privacy and complies with applicable laws. This policy explains what information we collect and how we use it.</p>
+
+    <h2>1. Information We Collect</h2>
+    <div class="card">
+      <div class="card-title">Automatically Collected</div>
+      <ul>
+        <li><strong>Location</strong>: Used for airspace checks and weather analysis (collected only while using the app)</li>
+        <li><strong>Device Info</strong>: Device model and OS version for crash reporting</li>
+        <li><strong>Usage Data</strong>: Anonymized statistics for feature improvement</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">User Provided</div>
+      <ul>
+        <li><strong>Account Info</strong>: Email address and profile name via Google Sign-In (Firebase Auth)</li>
+        <li><strong>Drone Model</strong>: User-entered drone model name</li>
+        <li><strong>Flight Logs</strong>: Date, location, duration, weather, and notes</li>
+      </ul>
+    </div>
+
+    <h2>2. How We Use Your Information</h2>
+    <ul>
+      <li>Providing AI flight safety analysis</li>
+      <li>Real-time airspace and weather data retrieval</li>
+      <li>Flight logbook storage and management</li>
+      <li>App improvement and bug fixing</li>
+      <li>Ad delivery via Google AdMob</li>
+    </ul>
+
+    <h2>3. Third-Party Services</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Google Firebase</strong>: Auth & storage — <a href="https://firebase.google.com/support/privacy" style="color:#a5b4fc;">Privacy Policy</a></li>
+        <li><strong>Google Gemini AI</strong>: AI analysis — <a href="https://policies.google.com/privacy" style="color:#a5b4fc;">Privacy Policy</a></li>
+        <li><strong>Google AdMob</strong>: Ads — <a href="https://policies.google.com/privacy" style="color:#a5b4fc;">Privacy Policy</a></li>
+        <li><strong>V-World API</strong>: Korean airspace (National Geographic Information Institute)</li>
+        <li><strong>OpenAIP</strong>: International airspace data</li>
+      </ul>
+    </div>
+
+    <h2>4. Data Retention & Deletion</h2>
+    <p>User data including flight logs is deleted upon account deletion. To request account deletion, please contact us at the email below.</p>
+
+    <h2>5. Children's Privacy</h2>
+    <p>This app is not directed at children under 14, and we do not knowingly collect personal data from them.</p>
+
+    <h2>6. Changes to This Policy</h2>
+    <p>We may update this policy. Significant changes will be communicated via in-app notices.</p>
+
+    <div class="contact-box">
+      <p style="font-size:16px; font-weight:600; color:white; margin-bottom:8px;">Contact Us</p>
+      <p>For privacy-related inquiries, please reach out to us.</p>
+      <p style="margin-top:12px; color:white; font-weight:600;">dronemanager.help@gmail.com</p>
+    </div>
+  </div>
+
+  <!-- 일본어 -->
+  <div class="section" id="ja">
+    <h1>プライバシーポリシー</h1>
+    <p class="updated">最終更新日：2026年4月25日</p>
+
+    <p>Drone Manager（以下「本アプリ」）は、ユーザーのプライバシーを重視し、関連法規を遵守します。本ポリシーでは、収集する情報とその使用方法について説明します。</p>
+
+    <h2>1. 収集する情報</h2>
+    <div class="card">
+      <div class="card-title">自動収集情報</div>
+      <ul>
+        <li><strong>位置情報</strong>：空域確認・気象分析に使用（アプリ使用中のみ収集）</li>
+        <li><strong>端末情報</strong>：クラッシュ解析のための機種・OSバージョン</li>
+        <li><strong>利用データ</strong>：機能改善のための匿名統計情報</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">ユーザー入力情報</div>
+      <ul>
+        <li><strong>アカウント情報</strong>：Googleサインイン時のメールアドレスとプロフィール名</li>
+        <li><strong>機体情報</strong>：ユーザーが入力したドローンのモデル名</li>
+        <li><strong>フライトログ</strong>：日付・場所・飛行時間・天気・メモ</li>
+      </ul>
+    </div>
+
+    <h2>2. 情報の利用目的</h2>
+    <ul>
+      <li>AI飛行安全分析サービスの提供</li>
+      <li>リアルタイム空域・気象情報の取得</li>
+      <li>フライトログブックの保存・管理</li>
+      <li>アプリの改善・バグ修正</li>
+      <li>Google AdMobによる広告配信</li>
+    </ul>
+
+    <h2>3. 第三者サービス</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Google Firebase</strong>：認証・データ保存 — <a href="https://firebase.google.com/support/privacy" style="color:#a5b4fc;">プライバシーポリシー</a></li>
+        <li><strong>Google Gemini AI</strong>：AI分析 — <a href="https://policies.google.com/privacy" style="color:#a5b4fc;">プライバシーポリシー</a></li>
+        <li><strong>Google AdMob</strong>：広告配信 — <a href="https://policies.google.com/privacy" style="color:#a5b4fc;">プライバシーポリシー</a></li>
+        <li><strong>V-World API</strong>：韓国空域情報（国土地理情報院）</li>
+        <li><strong>OpenAIP</strong>：国際空域情報</li>
+      </ul>
+    </div>
+
+    <h2>4. データの保管・削除</h2>
+    <p>フライトログ等のユーザーデータは、アカウント削除時に削除されます。削除をご希望の場合は、下記メールアドレスまでご連絡ください。</p>
+
+    <h2>5. 子どものプライバシー</h2>
+    <p>本アプリは14歳未満を対象としておらず、当該年齢の個人情報を意図的に収集しません。</p>
+
+    <h2>6. ポリシーの変更</h2>
+    <p>本ポリシーは変更される場合があります。重要な変更はアプリ内通知でお知らせします。</p>
+
+    <div class="contact-box">
+      <p style="font-size:16px; font-weight:600; color:white; margin-bottom:8px;">お問い合わせ</p>
+      <p>プライバシーに関するお問い合わせは、下記メールアドレスまでご連絡ください。</p>
+      <p style="margin-top:12px; color:white; font-weight:600;">dronemanager.help@gmail.com</p>
+    </div>
+  </div>
+
+  <!-- 중국어 -->
+  <div class="section" id="zh">
+    <h1>隐私政策</h1>
+    <p class="updated">最后更新：2026年4月25日</p>
+
+    <p>Drone Manager（以下简称"本应用"）重视用户隐私，并遵守相关法律法规。本政策说明我们收集的信息及其使用方式。</p>
+
+    <h2>1. 收集的信息</h2>
+    <div class="card">
+      <div class="card-title">自动收集信息</div>
+      <ul>
+        <li><strong>位置信息</strong>：用于空域确认和气象分析（仅在使用应用期间收集）</li>
+        <li><strong>设备信息</strong>：用于错误分析的设备型号和系统版本</li>
+        <li><strong>使用数据</strong>：用于功能改进的匿名统计数据</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">用户输入信息</div>
+      <ul>
+        <li><strong>账户信息</strong>：通过Google登录时的邮箱地址和用户名</li>
+        <li><strong>无人机信息</strong>：用户手动输入的无人机型号</li>
+        <li><strong>飞行日志</strong>：日期、地点、飞行时长、天气及备注</li>
+      </ul>
+    </div>
+
+    <h2>2. 信息使用目的</h2>
+    <ul>
+      <li>提供AI飞行安全分析服务</li>
+      <li>实时空域与气象信息查询</li>
+      <li>飞行日志的存储与管理</li>
+      <li>应用功能改进与错误修复</li>
+      <li>通过Google AdMob投放广告</li>
+    </ul>
+
+    <h2>3. 第三方服务</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Google Firebase</strong>：身份验证与数据存储 — <a href="https://firebase.google.com/support/privacy" style="color:#a5b4fc;">隐私政策</a></li>
+        <li><strong>Google Gemini AI</strong>：AI分析 — <a href="https://policies.google.com/privacy" style="color:#a5b4fc;">隐私政策</a></li>
+        <li><strong>Google AdMob</strong>：广告服务 — <a href="https://policies.google.com/privacy" style="color:#a5b4fc;">隐私政策</a></li>
+        <li><strong>V-World API</strong>：韩国空域信息（国土地理信息院）</li>
+        <li><strong>OpenAIP</strong>：国际空域信息</li>
+      </ul>
+    </div>
+
+    <h2>4. 数据保留与删除</h2>
+    <p>飞行日志等用户数据将在账户删除时一并删除。如需删除账户，请通过以下邮箱与我们联系。</p>
+
+    <h2>5. 儿童隐私</h2>
+    <p>本应用不面向14岁以下儿童，我们不会故意收集该年龄段用户的个人信息。</p>
+
+    <h2>6. 政策变更</h2>
+    <p>本政策可能会有所更新。重要变更将通过应用内通知告知用户。</p>
+
+    <div class="contact-box">
+      <p style="font-size:16px; font-weight:600; color:white; margin-bottom:8px;">联系我们</p>
+      <p>如有隐私相关问题，请通过以下邮箱联系我们。</p>
+      <p style="margin-top:12px; color:white; font-weight:600;">dronemanager.help@gmail.com</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Drone Manager. All rights reserved.
+</footer>
+
+<script>
+function switchLang(lang) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(lang).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
